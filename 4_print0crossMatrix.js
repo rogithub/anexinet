@@ -23,7 +23,7 @@ let findZero = (matrix) => {
  * Makes a zero cross in a matrix containing zero as element in a row.
  * @method setZeroCross
  * @param {number[][]} inputMatrix input matrix
- * @param {position[]} the 0 position.
+ * @param {position[]} position the 0 position.
  * @return {number[][]} new matrix.
  */
 let setZeroCross = (inputMatrix, position) => {
