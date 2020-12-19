@@ -1,4 +1,4 @@
-* Test
+# Test
 
 1. Write a function that adds two numbers without using any arithmetic operators.
 
