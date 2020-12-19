@@ -5,29 +5,30 @@
  * @return {number[][]} the position.
  */
 let findZero = (matrix) => {
-    let rowCol = [-1, -1];
+    let position = [-1, -1];
     for (let i = 0; i < matrix.length; i++) {
         let arr = matrix[i];
         for (let j = 0; j < arr.length; j++) {
             if (arr[j] === 0) {
-                rowCol[0] = i;
-                rowCol[1] = j;  
-                return rowCol;
+                position[0] = i;
+                position[1] = j;  
+                return position;
             }
         }
     }
-    return rowCol;
+    return position;
 };
 
 /**
  * Makes a zero cross in a matrix containing zero as element in a row.
  * @method setZeroCross
  * @param {number[][]} inputMatrix input matrix
- * @return {rowCol[]} the 0 position.
+ * @param {position[]} the 0 position.
+ * @return {number[][]} new matrix.
  */
-let setZeroCross = (inputMatrix, rowCol) => {
-    let row = rowCol[0];
-    let col = rowCol[1];
+let setZeroCross = (inputMatrix, position) => {
+    let row = position[0];
+    let col = position[1];
     let matrix = [...inputMatrix]; // make it imutable
 
     if (col === -1 && row === -1) return matrix;
