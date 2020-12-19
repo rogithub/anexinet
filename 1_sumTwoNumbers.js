@@ -23,7 +23,7 @@ let add = (a, b) => {
     //   1 1 0 0             1 2  
 
 
-    return (b == 0) ?  
+    return (b === 0) ?  
     a: add(bitwiseSum(a, b), carryLeft(a, b));  
 };
 
